@@ -1,0 +1,334 @@
+
+.app-header{
+   background-color: #222d32;
+}
+
+.app-header__logo{
+   background-color: #222d32;
+}
+
+
+/*!
+ * Clase para el Avatar
+ *Ancho de 48 px, color gray, padding 6pizeles
+ * ================================*/
+ 
+.app-sidebar__user-avatar {
+   width: 48px;
+   background: gray;
+   padding: 6px;
+}
+
+.appWhatsapp {
+   position: fixed; /* posicion fija en toda la pagina*/
+   right: 26px; /*distancia*/
+   bottom: 50px; /*parte inferior*/
+   width: 60px;
+   z-index: 1000; /*se sobrepono sobre los demas, sobre las demas imagenes*/
+}
+
+.appWhatsapp img{
+   width: 100%;
+   height: auto;
+}
+
+.headerRegister, .header-primary{
+   background: #28a745;
+   color: #FFF;
+}
+
+.headerUpdate{
+   background: #007bff;
+   color: #FFF;
+}
+
+.textcenter{
+   text-align: center; /*centra el texto del elemento de la clase*/
+}
+
+.textright{
+   text-align: right; /*para la tabla se alinee la columna 4 de productos*/
+}
+
+.textleft{
+   text-align: left; /*alinear tabla*/
+}
+
+.boostrap-select > .dropdown-toggle{
+   border: 1px solid #ccc;
+}
+
+
+.notblock{
+   display: none;
+}
+
+/*!
+ * Color 50 % 50 en login
+ * top --> de arriba a bajo
+ * ================================*/
+ 
+/*
+.login-content{
+   background-image: linear-gradient(to top, white 0%, white 50%, red 50%, orange 100%);
+}/*
+
+.text-center{
+   text-align: center;
+}
+
+/* Cargando */
+*, *:after, *:before{
+   margin: 0;
+   padding:0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+
+}
+
+
+/* Transparencia 0.9
+   alto 100%
+   transicion de 1 segundo de tipo ease*/
+
+#contenedor_carga{
+   background-color: rgb(46, 46, 46);
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   -webkit-transition: all 1s ease;
+   -o-transition: all 1s ease;
+   transition: all 1s ease;
+   z-index: 10000;
+
+}
+
+#carga{
+   border:8px solid #ccc;
+   border-top-color: #CBCBCB; /* Border superior*/
+   border-top-style: groove;
+   height: 80px;
+   width: 80px;
+   border-radius: 100% ; /* Border circular*/
+
+   position: absolute;/* Se posicion en el centro de la ventana*/
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto; /* se centre*/
+
+   /*Animacion para que gire se llamara girar y durar 1.5segundos */
+   -webkit-animation: girar 1.5s linear infinite;
+   -o-animation: girar 1.5s linear infinite;
+   animation: girar 1.5s linear infinite;
+
+}
+
+/* Creamos animacion de girar*/
+@keyframes girar {
+   from { transform: rotate(0deg);} /* Empieza en 0 grados y lo rotamos*/
+   to { transform: rotate(360deg);} /* Terminara en 360 grados para que gire infinitamente*/
+}
+
+
+
+/*Estilos para la foto de categoria*/
+
+/*Imagen por defecto*/
+
+.prevPhoto {
+   display: flex;
+   justify-content: space-between;
+   width: 300px;
+   height: 200px;
+   border: 1px solid #CCC;
+   position: relative;
+   cursor: pointer;
+   background: url(../images/portada_categoria.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   margin: auto;
+}
+
+.prevMesa{
+   display: flex;
+   justify-content: space-between;
+   width: 128px;
+   height: 128px;
+   border: 1px solid #ccc;
+   position: relative;
+   cursor: pointer;
+   background: url(../images/mesa3.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   margin: auto;
+}
+
+.prevMesa label{
+   cursor: pointer;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 2;
+ }
+
+.prevPhoto label{
+  cursor: pointer;   
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.prevPhoto img{
+  width: 100%;
+  height: 100%;
+}
+.upimg, .notBlock{
+  display: none !important;
+}
+.errorArchivo{
+  font-size: 16px;
+  font-family: arial;
+  color: #cc0000;
+  text-align: center;
+  font-weight: bold; 
+  margin-top: 10px;
+}
+.delPhoto{
+  color: #FFF;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background: red;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 10;
+}
+#tbl_list_productos img{
+  width: 50px;
+}
+.imgProductoDelete{
+  width: 175px;
+}
+
+/*id celFoto*/
+#celFoto{
+   text-align: center;
+}
+#celFoto img{
+   width: 200px;
+   margin: auto; /*se centre*/
+}
+
+
+/*Cargar imagenes para los productos*/
+#containerImages{
+   display: flex; /*se coloquen las fotos uno al lado del otro*/
+   justify-content: flex-start; /*inicie de izquierda a derecha*/
+   align-items: center; /*se centre en la parte vertical*/
+   flex-wrap: wrap; /*cuando no quepen los elementos bajen.*/
+}
+
+/*se aplica al div de imagenes del primer nivel con el signo ">" */
+#containerImages > div{ 
+   margin-right: 10px; /*hacia la derecha de 10 px*/
+   margin-bottom: 8px; /*parte inferior */
+}
+
+/*contenedor de imagen*/
+.prevImage{
+   border: 1px solid #ccc;
+   width: 120px;
+   height: 148px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/*objeto de imagen*/
+.prevImage img{
+   width: 100%; /*ocupa todo el ancho del contenedor*/
+}
+
+.inputUploadfile{
+   display: none; /*ocultamos el input*/
+}
+
+
+/*Estilos para botones*/
+.btnUploadfile, .btnDeleteImage{
+  border: 0;
+  background-color: #28a745;
+  text-align: center;
+  padding: 2px 3px;
+  color: #FFF; /*color letra*/
+  font-size: 9pt;
+  cursor: pointer;/*cuando el mouse pase por el boton cambia de apariencia*/
+  width: 100%;
+}
+
+.btnDeleteImage{
+   background-color: #dc3545;
+}
+
+/*Loading para imagen*/
+.prevImage .loading{
+   width: 30px;
+   height: 30px;
+}
+
+/*estilos para la visualizacion de la foto al momento de dar click en ver producto*/
+#celFotos img{
+   width: 150px; /*ancho*/
+   margin: 10px; /*para que este separado*/
+}
+
+
+/*Tienda virtual - metodo de pago*/
+.divmetodopago label, #divCondiciones{
+  width: 100%;
+  display: flex; /*se coloque uno al lado de otro*/
+}
+
+/*se aplica  a los input dentro del label y dentro de la clase*/
+.divmetodopago label input, #divCondiciones input{
+   margin-right: 15px; /*margen hacia la derecha*/
+}
+
+.divmetodopago label span{
+    margin-right: 10px;
+}
+
+#divCondiciones label{
+   margin-bottom: 0;  /*le quitamos el margen al label*/
+}
+
+/* nos dirigimos al id luego al enlace*/
+#divCondiciones a{
+   margin-left: 5px; /*separador al lado*/
+
+}
+
+
+
+/*modal termino de condiciones*/
+.modal{
+   z-index: 9999; /*sobre pone el modal sobre los elementos de abajo.*/
+}
+
